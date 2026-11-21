@@ -1,0 +1,3 @@
+write /cygdrive/d/MuMuWork/image-edit/staging/hosts.orig /testfile
+ls -l /
+stat /testfile
