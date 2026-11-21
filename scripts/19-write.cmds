@@ -1,0 +1,24 @@
+cd /system/priv-app/Lawnchair
+mkdir lib
+cd lib
+mkdir x86_64
+cd x86_64
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libMTQ5ODQ1MTMz.so libMTQ5ODQ1MTMz.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libandroidx.graphics.path.so libandroidx.graphics.path.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libdatastore_shared_counter.so libdatastore_shared_counter.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libhoko_blur.so libhoko_blur.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libnrb.so libnrb.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libpl_droidsonroids_gif.so libpl_droidsonroids_gif.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libsentry-android.so libsentry-android.so
+write /cygdrive/d/MuMuWork/image-edit/staging/lib/lib/x86_64/libsentry.so libsentry.so
+cd /system/priv-app/Lawnchair
+write /cygdrive/d/MuMuWork/image-edit/staging/Lawnchair-upper.apk Lawnchair.apk
+cd /system/app
+mkdir Via
+cd Via
+write /cygdrive/d/MuMuWork/image-edit/staging/Via.apk Via.apk
+cd /system/etc
+write /cygdrive/d/MuMuWork/image-edit/staging/hosts.new hosts
+cd /system
+rm build.prop
+write /cygdrive/d/MuMuWork/image-edit/staging/build.prop.new build.prop
