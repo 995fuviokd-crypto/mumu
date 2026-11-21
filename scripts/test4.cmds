@@ -1,0 +1,4 @@
+cd /
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value testfile security.selinux
+ea_get testfile security.selinux
+stat testfile
