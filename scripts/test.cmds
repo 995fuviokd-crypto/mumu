@@ -1,0 +1,10 @@
+write /cygdrive/d/MuMuWork/image-edit/staging/hosts.orig /testfile
+ls -l /
+stat /testfile
+sif /testfile mode 0100644
+sif /testfile uid 0
+sif /testfile gid 0
+ea_set /testfile security.selinux u:object_r:system_file:s0
+ea_get /testfile security.selinux
+stat /testfile
+rm /testfile
