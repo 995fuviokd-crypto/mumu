@@ -1,0 +1,69 @@
+cd /system/priv-app
+sif Lawnchair mode 040755
+cd /system/priv-app/Lawnchair
+sif Lawnchair.apk mode 0100644
+sif Lawnchair.apk uid 0
+sif Lawnchair.apk gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value Lawnchair.apk security.selinux
+sif lib mode 040755
+sif lib uid 0
+sif lib gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value lib security.selinux
+cd lib
+sif x86_64 mode 040755
+sif x86_64 uid 0
+sif x86_64 gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value x86_64 security.selinux
+cd x86_64
+sif libMTQ5ODQ1MTMz.so mode 0100644
+sif libMTQ5ODQ1MTMz.so uid 0
+sif libMTQ5ODQ1MTMz.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libMTQ5ODQ1MTMz.so security.selinux
+sif libandroidx.graphics.path.so mode 0100644
+sif libandroidx.graphics.path.so uid 0
+sif libandroidx.graphics.path.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libandroidx.graphics.path.so security.selinux
+sif libdatastore_shared_counter.so mode 0100644
+sif libdatastore_shared_counter.so uid 0
+sif libdatastore_shared_counter.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libdatastore_shared_counter.so security.selinux
+sif libhoko_blur.so mode 0100644
+sif libhoko_blur.so uid 0
+sif libhoko_blur.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libhoko_blur.so security.selinux
+sif libnrb.so mode 0100644
+sif libnrb.so uid 0
+sif libnrb.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libnrb.so security.selinux
+sif libpl_droidsonroids_gif.so mode 0100644
+sif libpl_droidsonroids_gif.so uid 0
+sif libpl_droidsonroids_gif.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libpl_droidsonroids_gif.so security.selinux
+sif libsentry-android.so mode 0100644
+sif libsentry-android.so uid 0
+sif libsentry-android.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libsentry-android.so security.selinux
+sif libsentry.so mode 0100644
+sif libsentry.so uid 0
+sif libsentry.so gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value libsentry.so security.selinux
+cd /system/app
+sif Via mode 040755
+sif Via uid 0
+sif Via gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value Via security.selinux
+cd Via
+sif Via.apk mode 0100644
+sif Via.apk uid 0
+sif Via.apk gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value Via.apk security.selinux
+cd /system/etc
+sif hosts mode 0100644
+sif hosts uid 0
+sif hosts gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value hosts security.selinux
+cd /system
+sif build.prop mode 0100600
+sif build.prop uid 0
+sif build.prop gid 0
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value build.prop security.selinux
