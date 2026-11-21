@@ -1,0 +1,6 @@
+id=mumu_noads
+name=MuMu Ads Blocker
+version=1.0
+versionCode=1
+author=local
+description=Block MuMu ad and telemetry domains in the Android guest and force the overseas ad-free flag.
