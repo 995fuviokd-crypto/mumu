@@ -1,0 +1,5 @@
+cd /
+write /cygdrive/d/MuMuWork/image-edit/staging/hosts.orig testfile
+ea_set -f /cygdrive/d/MuMuWork/image-edit/selinux.value testfile security.selinux
+ea_get testfile security.selinux
+stat testfile
