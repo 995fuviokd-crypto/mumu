@@ -1,18 +1,23 @@
 # mumu
 
-MuMu 6.0（Android 15）去 MuMu 化 + 镜像级烘焙 + Momo 4.4.1 环境研究的工作仓库。
+MuMu 6.0（Android 15）去 MuMu 化 + 镜像级烘焙 + Momo 4.4.1 环境研究。
 
-私有仓库。不含任何账号凭据。
+私有仓库。不含任何账号凭据。**不是整机镜像**，是可复现的改版配方与关键产物；未上传内容见 `docs/EXCLUDED.md`。
 
 ## 目录
 
 ```
 README.md
-docs/                 分析报告（8 份）
-scripts/              镜像编辑、构建、验证脚本（115 个，按编号顺序）
-artifacts/            hosts / build.prop / 三个 Momo 改版 APK
-screenshots/          验证截图
-mumu-modified.zip     以上内容的打包快照（6.1 MB）
+docs/                  报告 + EXCLUDED.md（未上传清单）
+scripts/               镜像解析/合并/编辑/构建/验证/逆向脚本（117 个）
+configs/               写入镜像的 build.prop（新旧）、hosts（新旧）、SELinux 标签值
+apps/                  Via.apk + 桌面依赖的 8 个 native 库
+modules/               KernelSU 模块（mumu_noads）与旧版脚本
+artifacts/             hosts.txt / build.prop.txt / 三个 Momo 改版 APK
+harness/H.java         native 库独立验证源码
+screenshots/           验证截图
+MANIFEST.sha256        仓库文件 + 镜像包 + Release 附件的 SHA-256
+mumu-modified.zip      以上内容的打包快照
 ```
 
 Release **v1.0** 附带 `lawnchair-final2.apk`（49.4 MB，去 MuMu 桌面，平台签名）。
@@ -36,8 +41,7 @@ Release **v1.0** 附带 `lawnchair-final2.apk`（49.4 MB，去 MuMu 桌面，平
 | `artifacts/momo-resigned.apk` | Momo 4.4.1 仅重签版：可稳定打开，显示真实检测信息 |
 | `artifacts/momo-patched.apk` | 增加 native 预热补丁（`App.get(0)` 先于 `check()`） |
 | `artifacts/momo-pro.apk` | 预热 + 签名哈希绕过（会触发“破坏行为”判定，仅作研究） |
-| `artifacts/hosts.txt` | 镜像内 hosts |
-| `artifacts/build.prop.txt` | 镜像内 build.prop |
+| `artifacts/hosts.txt` / `build.prop.txt` | 镜像内最终文件 |
 | Release v1.0 | `lawnchair-final2.apk` |
 
 ## 脚本依赖
@@ -47,6 +51,10 @@ Release **v1.0** 附带 `lawnchair-final2.apk`（49.4 MB，去 MuMu 桌面，平
 - JDK 21、Android build-tools（apktool / zipalign / apksigner / d8）
 
 脚本中的绝对路径按本机 `D:\MuMuWork` 编写，迁移时需替换。
+
+## 完整性
+
+`MANIFEST.sha256` 覆盖仓库内全部文件、`mumu-modified.zip` 与 Release 附件。逐文件 SHA-256 与本机一致。
 
 ## 免责
 
